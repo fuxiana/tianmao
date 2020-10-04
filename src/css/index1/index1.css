@@ -1,0 +1,147 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.mediate {
+  width: 1230px;
+  margin: auto;
+}
+
+header {
+  height: 32px;
+  background-color: #f2f2f2;
+  line-height: 32px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #999;
+}
+
+.header a {
+  color: #999;
+}
+
+.header a:hover {
+  color: red;
+}
+
+.header p span {
+  padding-right: 20px;
+}
+
+.header_right {
+  display: flex;
+}
+
+.header_right a {
+  display: inline-block;
+  padding-right: 14px;
+  padding: 0px 10px;
+  text-align: center;
+}
+
+.header_right .he_ri_one {
+  position: relative;
+}
+
+.header_right .he_ri_none {
+  display: none;
+  line-height: 25px;
+  position: absolute;
+  left: -1px;
+  top: 28px;
+  width: 80px;
+  border: 1px solid #eee;
+  border-top: 0px;
+  z-index: 10;
+  padding: 5px 15px 5px 0px;
+}
+
+.header_right .he_ri_two {
+  position: relative;
+}
+
+.header_right .he_ri_two span {
+  position: absolute;
+  left: 33px;
+  top: 16px;
+  font-size: 0px;
+  z-index: 10;
+  border: 5px transparent solid;
+  border-bottom: 5px solid white;
+  display: none;
+}
+
+.header_right .he_ri_two div {
+  position: absolute;
+  left: -47px;
+  top: 26px;
+  display: none;
+  width: 175px;
+  height: 175px;
+  box-shadow: 0 0 5px #aaa;
+  background: url(//img.alicdn.com/tfs/TB1vJ0POwTqK1RjSZPhXXXfOFXa-175-215.png) 0 0 no-repeat;
+}
+
+.header_right .he_ri_two:hover div {
+  display: block;
+}
+
+.header_right .he_ri_two:hover span {
+  display: block;
+}
+
+.header_right .he_ri_one:hover .he_ri_none {
+  display: block;
+}
+
+.header_right .he_ri_none :hover {
+  display: block;
+}
+
+.header_right a i {
+  display: inline-block;
+  margin: 0px 2px;
+  font-size: 0px;
+  border: 3px transparent solid;
+  border-top: 3px solid #999999;
+  vertical-align: 0px;
+}
+
+.header_right .he_n:hover {
+  color: red;
+}
+
+.header_right .he_a:hover {
+  background-color: white;
+  color: red;
+  text-decoration: underline;
+}
+
+.header_right a:hover i {
+  transform: rotate(180deg);
+  transform-origin: 50% 30%;
+  transition: transform .2s ease-in;
+}
+
+/*# sourceMappingURL=index1.css.map */

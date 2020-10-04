@@ -1,0 +1,26 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+%cleafix {
+    //被继承的代码不会编码
+    content: '';
+    clear: both;
+    display: block;
+}
+
+$page_width:1230px;
+.mediate {
+    width: $page_width;
+    margin: auto;
+}

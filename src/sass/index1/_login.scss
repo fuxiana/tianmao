@@ -1,0 +1,132 @@
+@import 'resetting';
+@mixin postion($direction:left, $positionvalue:absolute, $value1:10px, $value2:10px) {
+    //定位。默认情况下实在左上角为标准。
+    @if ($direction==left) {
+        //左上角的时候
+        position: $positionvalue;
+        left: $value1;
+        top: $value2;
+    }
+    @else {
+        //右下角
+        position: $positionvalue;
+        right: $value1;
+        bottom: $value2;
+    }
+}
+
+header {
+    @extend %cleafix;
+    height: 32px;
+    background-color: #f2f2f2;
+    line-height: 32px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #999;
+}
+
+.header a {
+    color: #999;
+}
+
+.header a:hover {
+    color: red;
+}
+
+.header p span {
+    padding-right: 20px;
+}
+
+.header_right {
+    display: flex;
+}
+
+.header_right a {
+    display: inline-block;
+    padding-right: 14px;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.header_right .he_ri_one {
+    position: relative;
+}
+
+.header_right .he_ri_none {
+    display: none;
+    line-height: 25px;
+    @include postion(left, absolute, -1px, 28px);
+    width: 80px;
+    border: 1px solid #eee;
+    border-top: 0px;
+    z-index: 10;
+    padding: 5px 15px 5px 0px;
+}
+
+.header_right .he_ri_two {
+    position: relative;
+}
+
+.header_right .he_ri_two span {
+    @include postion(left, absolute, 33px, 16px);
+    font-size: 0px;
+    z-index: 10;
+    border: 5px transparent solid;
+    border-bottom: 5px solid white;
+    display: none;
+}
+
+.header_right .he_ri_two div {
+    @include postion(left, absolute, -47px, 26px);
+    display: none;
+    width: 175px;
+    height: 175px;
+    box-shadow: 0 0 5px #aaa;
+    background: url(//img.alicdn.com/tfs/TB1vJ0POwTqK1RjSZPhXXXfOFXa-175-215.png) 0 0 no-repeat;
+}
+
+.header_right .he_ri_two:hover div {
+    display: block;
+}
+
+.header_right .he_ri_two:hover span {
+    display: block;
+}
+
+.header_right .he_ri_one:hover .he_ri_none {
+    display: block;
+}
+
+.header_right .he_ri_none :hover {
+    display: block;
+}
+
+.header_right a i {
+    display: inline-block;
+    margin: 0px 2px;
+    font-size: 0px;
+    border: 3px transparent solid;
+    border-top: 3px solid #999999;
+    vertical-align: 0px;
+}
+
+.header_right .he_n:hover {
+    color: red;
+}
+
+.header_right .he_a:hover {
+    background-color: white;
+    color: red;
+    text-decoration: underline;
+}
+
+.header_right a:hover i {
+    transform: rotate(180deg);
+    transform-origin: 50% 30%;
+    transition: transform .2s ease-in;
+}
