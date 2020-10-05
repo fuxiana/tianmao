@@ -1,0 +1,93 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5130",
+      "name": "珠宝饰品",
+      "font_class": "zhubaoshipin",
+      "unicode": "3452",
+      "unicode_decimal": 13394
+    },
+    {
+      "icon_id": "5134",
+      "name": "母婴玩具",
+      "font_class": "muyingwanju",
+      "unicode": "3456",
+      "unicode_decimal": 13398
+    },
+    {
+      "icon_id": "5137",
+      "name": "女装内衣",
+      "font_class": "nvzhuangneiyi",
+      "unicode": "3459",
+      "unicode_decimal": 13401
+    },
+    {
+      "icon_id": "6270",
+      "name": "男装",
+      "font_class": "nanzhuang",
+      "unicode": "346c",
+      "unicode_decimal": 13420
+    },
+    {
+      "icon_id": "551962",
+      "name": "箭头",
+      "font_class": "arrow-right",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "947088",
+      "name": "美妆",
+      "font_class": "meizhuang",
+      "unicode": "e661",
+      "unicode_decimal": 58977
+    },
+    {
+      "icon_id": "998483",
+      "name": "购物车",
+      "font_class": "ai66",
+      "unicode": "e6b8",
+      "unicode_decimal": 59064
+    },
+    {
+      "icon_id": "1086253",
+      "name": "鞋子",
+      "font_class": "xiezi",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "5192842",
+      "name": "泡面",
+      "font_class": "paomian",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "6249004",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "7533278",
+      "name": "导航栏_模式02",
+      "font_class": "daohanglan_moshi",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "7791027",
+      "name": "水果",
+      "font_class": "shuiguo",
+      "unicode": "e7f0",
+      "unicode_decimal": 59376
+    }
+  ]
+}

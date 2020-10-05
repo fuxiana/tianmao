@@ -1,0 +1,46 @@
+    .headerLayout {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .headerLayout .headerLogo {
+        margin-left: -40px;
+    }
+    
+    .headerSearch {
+        height: 46px;
+        width: 625px;
+        margin-top: 39px;
+        border: solid #FF0036;
+    }
+    
+    .headerSearch input,
+    .headerSearch button {
+        height: 36px;
+        padding: 5px 3px 5px 5px;
+        border: 0px;
+        outline: none;
+    }
+    
+    .headerSearch input {
+        width: 491px;
+        font-size: 16px;
+    }
+    
+    .headerSearch button {
+        cursor: pointer;
+        width: 126px;
+        height: 46px;
+        float: right;
+        background-color: red;
+        font-weight: 700;
+        font-size: 18px;
+        color: white;
+        text-indent: 10px;
+        letter-spacing: 10px;
+    }
+    
+    .headerLayout .headerNull {
+        width: 170px;
+    }

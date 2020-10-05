@@ -49,8 +49,14 @@ header {
 .header_right a {
     display: inline-block;
     padding-right: 14px;
-    padding: 0px 10px;
+    padding: 0px 8px;
     text-align: center;
+}
+
+.header_right span {
+    color: red;
+    vertical-align: middle;
+    padding: 0;
 }
 
 .header_right .he_ri_one {
@@ -60,11 +66,12 @@ header {
 .header_right .he_ri_none {
     display: none;
     line-height: 25px;
-    @include postion(left, absolute, -1px, 28px);
-    width: 80px;
+    @include postion(left, absolute, -1px, 34px);
+    width: 76px;
     border: 1px solid #eee;
     border-top: 0px;
     z-index: 10;
+    background-color: white;
     padding: 5px 15px 5px 0px;
 }
 
@@ -72,7 +79,7 @@ header {
     position: relative;
 }
 
-.header_right .he_ri_two span {
+.header_right .he_ri_two em {
     @include postion(left, absolute, 33px, 16px);
     font-size: 0px;
     z-index: 10;
@@ -94,7 +101,7 @@ header {
     display: block;
 }
 
-.header_right .he_ri_two:hover span {
+.header_right .he_ri_two:hover em {
     display: block;
 }
 
