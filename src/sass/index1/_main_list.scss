@@ -40,7 +40,7 @@
         background-color: rgba(0, 0, 0, .8);
         color: white;
         @include postion(right, absolute, 0px, 0px);
-        transition: all .3s ease-out;
+        transition: all .3s ease-in;
     }
     
     .list_brand li a p {
@@ -88,9 +88,11 @@
     }
     
     .supermarket_comment img,
-    .international_comment img {
+    .international_comment img,
+    .list_international img,
+    .list_life img {
         opacity: 1;
-        transition: opacity .3s ease-in;
+        transition: opacity .2s;
     }
     
     .list_comment_left:hover img {
@@ -119,6 +121,10 @@
         height: 64px;
         background-color: rgba(0, 0, 0, .9);
         color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
     
     .list_text_left span {
@@ -126,7 +132,6 @@
         width: 36px;
         font-size: 18px;
         margin: auto;
-        margin-top: 8px;
     }
     
     .list_text_right {
@@ -299,7 +304,7 @@
         font-size: 18px;
     }
     
-    //美丽人生
+    //美丽人生,潮店酷玩，
     .life_nav i {
         display: inline-block;
         height: 18px;
@@ -322,4 +327,50 @@
     .life_nav p span:nth-last-child(1) {
         line-height: 18px;
         font-size: 14px;
+    }
+    
+    //横图
+    .list_imgs img {
+        height: 90px;
+        width: 1620px;
+        margin-left: -165px;
+    }
+    
+    .list_imgs {
+        width: 1230px;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+    
+    //猜你喜欢
+    .list_like_nav {
+        height: 43px;
+        text-align: center;
+    }
+    
+    .list_like_nav i {
+        display: inline-block;
+        height: 1px;
+        width: 30px;
+        background-color: #979797;
+        vertical-align: middle;
+    }
+    
+    .list_like_nav span {
+        font-size: 25px;
+        color: red;
+        vertical-align: middle;
+    }
+    
+    .list_like_nav p {
+        font-size: 20px;
+        font-weight: 100;
+    }
+    
+    .list_last_img img {
+        display: block;
+        margin: 0px auto;
+        padding-bottom: 10px;
+        width: 80px;
+        height: 45px;
     }

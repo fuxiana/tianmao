@@ -48,9 +48,7 @@ header {
 
 .header_right a {
     display: inline-block;
-    padding-right: 14px;
     padding: 0px 8px;
-    text-align: center;
 }
 
 .header_right span {
@@ -63,16 +61,63 @@ header {
     position: relative;
 }
 
+.header_right .he_a1 {
+    border-left: 1px solid #f2f2f2;
+}
+
+.header_right .he_a2 {
+    border-right: 1px solid #f2f2f2;
+}
+
+.header_right .he_a1:hover,
+.header_right .he_a2:hover {
+    background-color: white;
+    border-bottom: 2px solid white;
+    color: red;
+    text-decoration: underline;
+}
+
 .header_right .he_ri_none {
     display: none;
     line-height: 25px;
-    @include postion(left, absolute, -1px, 34px);
+    @include postion(left, absolute, 0px, 33px);
     width: 76px;
     border: 1px solid #eee;
     border-top: 0px;
     z-index: 10;
     background-color: white;
     padding: 5px 15px 5px 0px;
+}
+
+.header_right .he_ri_none2 {
+    display: none;
+    z-index: 10;
+    background-color: white;
+    padding: 8px 10px;
+    width: 122px;
+    @include postion(left, absolute, -69px, 33px);
+    border: solid #eee;
+    border-width: 0px 1px 1px;
+    line-height: 22px;
+}
+
+.header_right .he_ri_none2 p {
+    padding-top: 5px;
+    color: #666;
+    font-weight: 700;
+}
+
+.header_right .he_ri_none2 a {
+    color: #666;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 0px;
+}
+
+.header_right .he_ri_none2 i {
+    display: block;
+    margin-top: 5px;
+    border-bottom: 1px dotted #827777;
 }
 
 .header_right .he_ri_two {
@@ -109,11 +154,15 @@ header {
     display: block;
 }
 
+.header_right .he_ri_one:hover .he_ri_none2 {
+    display: block;
+}
+
 .header_right .he_ri_none :hover {
     display: block;
 }
 
-.header_right a i {
+.header_right .he_a1 i {
     display: inline-block;
     margin: 0px 2px;
     font-size: 0px;
@@ -132,8 +181,78 @@ header {
     text-decoration: underline;
 }
 
-.header_right a:hover i {
+.header_right a:hover .he_a1 i {
     transform: rotate(180deg);
     transform-origin: 50% 30%;
     transition: transform .2s ease-in;
+}
+
+.he_ri_none3 {
+    background-color: white;
+    width: 1198px;
+    @include postion(left, absolute, -1105px, 33px);
+    border: solid #eee;
+    border-width: 0px 1px 1px;
+    padding: 25px 0px;
+}
+
+.he_ri_none3 li {
+    float: left;
+    height: 110px;
+    padding-left: 30px;
+    overflow: hidden;
+}
+
+.he_ri_none3 li a {
+    position: relative;
+    display: block;
+    float: left;
+    padding: 6px 0px;
+    width: 95px;
+    line-height: 1.4;
+}
+
+.he_ri_none3 li .wt {
+    width: 50px;
+}
+
+.he_ri_none3 ul li i {
+    display: block;
+    @include postion(left, absolute, 47px, 0px);
+    width: 9px;
+    height: 11px;
+}
+
+.he_ri_none3 .active1 {
+    background: url(../../images/TB1gyXLGFXXXXceXVXXCEcU6VXX-439-220.png) no-repeat -37px -11px;
+}
+
+.he_ri_none3 .active2 {
+    background: url(../../images/TB1gyXLGFXXXXceXVXXCEcU6VXX-439-220.png) no-repeat -37px 0px;
+}
+
+.he_ri_none3 li h1,
+.he_ri_none3 li span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.none3_recommend h1,
+.none3_recommend span {
+    color: #f56a00;
+}
+
+.none3_bazaar h1,
+.none3_bazaar span {
+    color: #2263d4
+}
+
+.none3_help h1,
+.none3_help span {
+    color: #666;
+}
+
+.he_ri_none3 .none3_bazaar>a:hover {
+    text-decoration: underline;
+    color: #2263d4;
 }
