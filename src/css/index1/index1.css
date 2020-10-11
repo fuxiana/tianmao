@@ -94,7 +94,7 @@ header {
   width: 76px;
   border: 1px solid #eee;
   border-top: 0px;
-  z-index: 10;
+  z-index: 1000;
   background-color: white;
   padding: 5px 15px 5px 0px;
 }
@@ -151,6 +151,7 @@ header {
   position: absolute;
   left: -47px;
   top: 26px;
+  z-index: 1000;
   display: none;
   width: 175px;
   height: 175px;
@@ -204,14 +205,20 @@ header {
 }
 
 .he_ri_none3 {
+  z-index: 1000;
+  display: none;
   background-color: white;
   width: 1198px;
   position: absolute;
-  left: -1105px;
+  left: -1115px;
   top: 33px;
   border: solid #eee;
   border-width: 0px 1px 1px;
   padding: 25px 0px;
+}
+
+.header_right .he_ri_one:hover .he_ri_none3 {
+  display: block;
 }
 
 .he_ri_none3 li {
@@ -277,6 +284,138 @@ header {
   color: #2263d4;
 }
 
+.header_top_fixed {
+  position: fixed;
+  z-index: 100;
+  top: -50px;
+  height: 50px;
+  width: 100%;
+  background-color: #FF0036;
+}
+
+.header_fixed_content {
+  width: 1260px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.fixed_content_left {
+  margin-top: 10px;
+  width: 160px;
+  height: 30px;
+  background: url(https://img.alicdn.com/tfs/TB1MaLKRXXXXXaWXFXXXXXXXXXX-480-260.png) no-repeat 2px -47px;
+  background-size: 160px 72px;
+  margin-right: 122px;
+}
+
+.fixed_content_center input {
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  width: 640px;
+  height: 30px;
+}
+
+.fixed_content_center button {
+  margin-left: -4px;
+  outline: none;
+  border: none;
+  height: 30px;
+  width: 90px;
+  background-color: #FF0036;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: white;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+.header_left_fixed {
+  position: fixed;
+  left: 50%;
+  margin-left: -663px;
+  bottom: 60px;
+  z-index: 10000;
+}
+
+.header_left_fixed ul {
+  opacity: 0;
+}
+
+.header_left_fixed .daohang {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background-color: #ff0036;
+  margin-bottom: 1px;
+}
+
+.header_left_fixed li {
+  height: 36px;
+  width: 36px;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: 1px;
+}
+
+.header_left_fixed li a {
+  display: inline-block;
+  width: 28px;
+  text-align: center;
+  color: white;
+  padding: 6px 4px;
+}
+
+.header_left_fixed li a span {
+  display: block;
+  font-size: 10px;
+  transform: rotate(-90deg);
+}
+
+.left_fixed_green:hover {
+  background-color: #64C333;
+}
+
+.left_fixed_green .active {
+  background-color: #64C333;
+}
+
+.left_fixed_red:hover {
+  background-color: #ff0036;
+}
+
+.left_fixed_red .active {
+  background-color: #ff0036;
+}
+
+.left_fixed_pink:hover {
+  background-color: #EA5F8D;
+}
+
+.left_fixed_pink .active {
+  background-color: #EA5F8D;
+}
+
+.left_fixed_blue:hover {
+  background-color: #0AA6E8;
+}
+
+.left_fixed_blue .active {
+  background-color: #0AA6E8;
+}
+
+.left_fixed_cyan:hover {
+  background-color: #19C8A9;
+}
+
+.left_fixed_cyan .active {
+  background-color: #19C8A9;
+}
+
 .headerLayout {
   display: flex;
   flex-direction: row;
@@ -292,6 +431,7 @@ header {
   width: 625px;
   margin-top: 39px;
   border: solid #FF0036;
+  position: relative;
 }
 
 .headerSearch input,
@@ -318,6 +458,22 @@ header {
   color: white;
   text-indent: 10px;
   letter-spacing: 10px;
+}
+
+.sousuo {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+  z-index: 10;
+  line-height: 25px;
+  width: 497px;
+  border: solid #eee;
+  border-width: 0px 1px 1px;
+}
+.sousuo li {
+  padding-left: 10px;
+  background-color: white;
+  cursor: pointer;
 }
 
 .headerLayout .headerNull {
@@ -369,8 +525,21 @@ header {
 
 .inner_nav2 {
   border-top: 2px solid #FF0036;
-  background: #e8e8e8;
+  background: blue;
   height: 500px;
+  position: relative;
+}
+
+.nav2_comment_imgs ul .active {
+  opacity: 1;
+  transition: all .5s;
+}
+
+.nav2_comment_imgs ul li {
+  position: absolute;
+  left: 50px;
+  top: 0px;
+  opacity: 0;
 }
 
 .nav2_comment_imgs ul li a img {
@@ -380,8 +549,8 @@ header {
 
 .inner_nav2_comment ol {
   position: absolute;
-  right: 560px;
-  bottom: 15px;
+  left: 560px;
+  top: 470px;
 }
 
 .inner_nav2_comment ol li {
@@ -391,6 +560,8 @@ header {
   background-color: #000;
   opacity: .3;
   margin-left: 5px;
+  cursor: pointer;
+  transition: all .5s;
 }
 
 .inner_nav2_comment ol .active {
@@ -430,7 +601,12 @@ header {
   background-color: white;
 }
 
-.nav2_color_red:hover {
+.nav2_color_red .active {
+  color: #e54077;
+}
+
+.nav2_color_red:hover,
+.nav2_color_red a:hover {
   color: #e54077;
 }
 
@@ -439,7 +615,12 @@ header {
   font-weight: 700;
 }
 
-.nav2_color_blue:hover {
+.nav2_color_blue:hover,
+.nav2_color_blue a:hover {
+  color: #427def;
+}
+
+.nav2_color_blue .active {
   color: #427def;
 }
 
@@ -448,7 +629,12 @@ header {
   font-weight: 700;
 }
 
-.nav2_color_green:hover {
+.nav2_color_green:hover,
+.nav2_color_green a:hover {
+  color: #6347ed;
+}
+
+.nav2_color_green .active {
   color: #6347ed;
 }
 
@@ -457,7 +643,12 @@ header {
   font-weight: 700;
 }
 
-.nav2_color_yellow:hover {
+.nav2_color_yellow:hover,
+.nav2_color_yellow a:hover {
+  color: #f7a831;
+}
+
+.nav2_color_yellow .active {
   color: #f7a831;
 }
 
@@ -466,7 +657,12 @@ header {
   font-weight: 700;
 }
 
-.nav2_color_green2:hover {
+.nav2_color_green2:hover,
+.nav2_color_green2 a:hover {
+  color: #3bc7b0;
+}
+
+.nav2_color_green2 .active {
   color: #3bc7b0;
 }
 
@@ -475,7 +671,12 @@ header {
   font-weight: 700;
 }
 
-.nav2_color_red2:hover {
+.nav2_color_red2:hover,
+.nav2_color_red2 a:hover {
+  color: #dd2727;
+}
+
+.nav2_color_red2 .active {
   color: #dd2727;
 }
 
@@ -540,15 +741,6 @@ header {
   color: black;
   margin-left: 13px;
   line-height: 30px;
-}
-
-.right_comment_text .active {
-  color: red;
-}
-
-.right_comment_text a:hover {
-  color: #e54077;
-  font-weight: 500;
 }
 
 .main_list {
@@ -724,7 +916,18 @@ header {
   overflow: hidden;
 }
 
-.two_commodity {
+.two_commodity1 {
+  background-color: white;
+  height: 301px;
+  width: 482px;
+  margin-left: 13px;
+  margin-bottom: 15px;
+  float: left;
+  display: block;
+}
+
+.two_commodity2 {
+  display: none;
   background-color: white;
   height: 301px;
   width: 482px;
@@ -733,7 +936,7 @@ header {
   float: left;
 }
 
-.two_commodity:hover img {
+.two_commodity_comment:hover img {
   opacity: .7;
 }
 
@@ -752,6 +955,7 @@ header {
 }
 
 .commodity_nav p {
+  cursor: pointer;
   float: left;
   width: 50%;
   text-align: center;
@@ -759,7 +963,7 @@ header {
   font-size: 18px;
 }
 
-.commodity_nav .two_commodity_one {
+.commodity_nav .active {
   background-color: #00B262;
 }
 

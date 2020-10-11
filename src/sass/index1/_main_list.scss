@@ -168,7 +168,18 @@
         overflow: hidden;
     }
     
-    .two_commodity {
+    .two_commodity1 {
+        background-color: white;
+        height: 301px;
+        width: 482px;
+        margin-left: 13px;
+        margin-bottom: 15px;
+        float: left;
+        display: block;
+    }
+    
+    .two_commodity2 {
+        display: none;
         background-color: white;
         height: 301px;
         width: 482px;
@@ -177,7 +188,7 @@
         float: left;
     }
     
-    .two_commodity:hover img {
+    .two_commodity_comment:hover img {
         opacity: .7;
     }
     
@@ -196,6 +207,7 @@
     }
     
     .commodity_nav p {
+        cursor: pointer;
         float: left;
         width: 50%;
         text-align: center;
@@ -203,7 +215,7 @@
         font-size: 18px;
     }
     
-    .commodity_nav .two_commodity_one {
+    .commodity_nav .active {
         background-color: #00B262;
     }
     

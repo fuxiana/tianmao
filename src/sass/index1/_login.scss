@@ -84,7 +84,7 @@ header {
     width: 76px;
     border: 1px solid #eee;
     border-top: 0px;
-    z-index: 10;
+    z-index: 1000;
     background-color: white;
     padding: 5px 15px 5px 0px;
 }
@@ -135,6 +135,7 @@ header {
 
 .header_right .he_ri_two div {
     @include postion(left, absolute, -47px, 26px);
+    z-index: 1000;
     display: none;
     width: 175px;
     height: 175px;
@@ -188,12 +189,18 @@ header {
 }
 
 .he_ri_none3 {
+    z-index: 1000;
+    display: none;
     background-color: white;
     width: 1198px;
-    @include postion(left, absolute, -1105px, 33px);
+    @include postion(left, absolute, -1115px, 33px);
     border: solid #eee;
     border-width: 0px 1px 1px;
     padding: 25px 0px;
+}
+
+.header_right .he_ri_one:hover .he_ri_none3 {
+    display: block;
 }
 
 .he_ri_none3 li {
@@ -255,4 +262,145 @@ header {
 .he_ri_none3 .none3_bazaar>a:hover {
     text-decoration: underline;
     color: #2263d4;
+}
+
+//最上面的固定定位
+//最上面的固定定位
+//最上面的固定定位
+//最上面的固定定位
+.header_top_fixed {
+    position: fixed;
+    z-index: 100;
+    top: -50px;
+    height: 50px;
+    width: 100%;
+    background-color: #FF0036;
+}
+
+.header_fixed_content {
+    width: 1260px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.fixed_content_left {
+    margin-top: 10px;
+    width: 160px;
+    height: 30px;
+    background: url(https://img.alicdn.com/tfs/TB1MaLKRXXXXXaWXFXXXXXXXXXX-480-260.png) no-repeat 2px -47px;
+    background-size: 160px 72px;
+    margin-right: 122px;
+}
+
+.fixed_content_center input {
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    width: 640px;
+    height: 30px;
+}
+
+.fixed_content_center button {
+    margin-left: -4px;
+    outline: none;
+    border: none;
+    height: 30px;
+    width: 90px;
+    background-color: #FF0036;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 4px;
+    color: white;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+//左边楼梯的固定定位
+//左边楼梯的固定定位
+//左边楼梯的固定定位
+//左边楼梯的固定定位
+//左边楼梯的固定定位
+.header_left_fixed {
+    position: fixed;
+    left: 50%;
+    margin-left: -663px;
+    bottom: 60px;
+    z-index: 10000;
+}
+
+.header_left_fixed ul {
+    opacity: 0;
+}
+
+.header_left_fixed .daohang {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background-color: #ff0036;
+    margin-bottom: 1px;
+}
+
+.header_left_fixed li {
+    height: 36px;
+    width: 36px;
+    font-size: 12px;
+    line-height: 12px;
+    background-color: rgba(0, 0, 0, .6);
+    margin-top: 1px;
+}
+
+.header_left_fixed li a {
+    display: inline-block;
+    width: 28px;
+    text-align: center;
+    color: white;
+    padding: 6px 4px;
+}
+
+.header_left_fixed li a span {
+    display: block;
+    font-size: 10px;
+    transform: rotate(-90deg);
+}
+
+.left_fixed_green:hover {
+    background-color: #64C333;
+}
+
+.left_fixed_green .active {
+    background-color: #64C333;
+}
+
+.left_fixed_red:hover {
+    background-color: #ff0036;
+}
+
+.left_fixed_red .active {
+    background-color: #ff0036;
+}
+
+.left_fixed_pink:hover {
+    background-color: #EA5F8D;
+}
+
+.left_fixed_pink .active {
+    background-color: #EA5F8D;
+}
+
+.left_fixed_blue:hover {
+    background-color: #0AA6E8;
+}
+
+.left_fixed_blue .active {
+    background-color: #0AA6E8;
+}
+
+.left_fixed_cyan:hover {
+    background-color: #19C8A9;
+}
+
+.left_fixed_cyan .active {
+    background-color: #19C8A9;
 }

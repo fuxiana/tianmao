@@ -13,6 +13,7 @@
         width: 625px;
         margin-top: 39px;
         border: solid #FF0036;
+        position: relative;
     }
     
     .headerSearch input,
@@ -39,6 +40,20 @@
         color: white;
         text-indent: 10px;
         letter-spacing: 10px;
+    }
+    
+    .sousuo {
+        @include postion(left, absolute, 0px, 50px);
+        z-index: 10;
+        line-height: 25px;
+        width: 497px;
+        border: solid #eee;
+        border-width: 0px 1px 1px;
+        li {
+            padding-left: 10px;
+            background-color: white;
+            cursor: pointer;
+        }
     }
     
     .headerLayout .headerNull {

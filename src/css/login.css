@@ -1,0 +1,156 @@
+header {
+    padding: 25px 0px;
+    height: 44px;
+    width: 1190px;
+    margin: auto;
+}
+
+header a img {
+    margin-top: 8px;
+    height: 27px;
+    width: 192px;
+}
+
+main {
+    background-color: rgb(255, 68, 119);
+    position: relative;
+}
+
+.main_imgs {
+    width: 1190px;
+    margin: auto;
+    position: relative;
+}
+
+.main_imgs a {
+    position: absolute;
+    left: 80px;
+    top: 75px;
+    height: 440px;
+    width: 630px;
+}
+
+.main_content {
+    display: none;
+    position: absolute;
+    right: 167px;
+    top: 91px;
+}
+
+.main_content2 {
+    display: block;
+    position: absolute;
+    right: 167px;
+    top: 91px;
+}
+
+.main_content_login {
+    position: relative;
+    background-color: white;
+    width: 300px;
+    height: 302px;
+    padding: 25px 25px 23px;
+}
+
+.content_login_nav {
+    position: absolute;
+    top: 5px;
+    right: 58px;
+    z-index: 10;
+    padding: 5px 10px;
+    color: #ff9000;
+    background-color: #fefcee;
+    border: 1px solid #f3d995;
+}
+
+.content_login_nav i {
+    position: absolute;
+    top: 7px;
+    right: -12px;
+    border: 6px solid transparent;
+    border-left: 6px solid #fefcee;
+}
+
+.content_login_nav em {
+    position: absolute;
+    right: -63px;
+    top: -12px;
+    color: red;
+    font-size: 52px;
+    cursor: pointer;
+}
+
+.content_login_nav span {
+    position: absolute;
+    top: 7px;
+    right: -13px;
+    border: 6px solid transparent;
+    border-left: 6px solid #ff9000;
+}
+
+.login_password_nav {
+    margin-bottom: 20px;
+}
+
+.login_password_nav a {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #3c3c3c;
+    margin: 9px 10px 0px 0px;
+    padding-bottom: 5px;
+}
+
+.login_password_nav .active {
+    border-bottom: 2px solid black;
+}
+
+.login_username {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.login_username:hover {
+    border: 1px solid rgb(255, 68, 119);
+}
+
+.login_username input {
+    height: 40px;
+    outline: none;
+    border: none;
+}
+
+.login_username p {
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    background-color: #ccc;
+    color: white;
+}
+
+.login_username span {
+    font-size: 24px;
+    width: 40px;
+}
+
+.login_btn button {
+    outline: none;
+    border: none;
+    color: white;
+    background-color: #f40;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.login_password {
+    float: right;
+}
+
+.login_password a {
+    color: #6c6c6c;
+    padding-left: 5px;
+}

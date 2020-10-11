@@ -44,8 +44,19 @@
 .inner_nav2 {
     //背景图的地方，还没有完善
     border-top: 2px solid #FF0036;
-    background: rgb(232, 232, 232);
+    background: blue;
     height: 500px;
+    position: relative;
+}
+
+.nav2_comment_imgs ul .active {
+    opacity: 1;
+    transition: all .5s;
+}
+
+.nav2_comment_imgs ul li {
+    @include postion(left, absolute, 50px, 0px);
+    opacity: 0;
 }
 
 .nav2_comment_imgs ul li a img {
@@ -54,7 +65,7 @@
 }
 
 .inner_nav2_comment ol {
-    @include postion(right, absolute, 560px, 15px);
+    @include postion(left, absolute, 560px, 470px);
 }
 
 .inner_nav2_comment ol li {
@@ -64,6 +75,8 @@
     background-color: #000;
     opacity: .3;
     margin-left: 5px;
+    cursor: pointer;
+    transition: all .5s;
 }
 
 .inner_nav2_comment ol .active {
@@ -101,7 +114,12 @@
     background-color: white;
 }
 
-.nav2_color_red:hover {
+.nav2_color_red .active {
+    color: #e54077;
+}
+
+.nav2_color_red:hover,
+.nav2_color_red a:hover {
     color: #e54077;
 }
 
@@ -110,7 +128,12 @@
     font-weight: 700;
 }
 
-.nav2_color_blue:hover {
+.nav2_color_blue:hover,
+.nav2_color_blue a:hover {
+    color: #427def;
+}
+
+.nav2_color_blue .active {
     color: #427def;
 }
 
@@ -119,7 +142,12 @@
     font-weight: 700;
 }
 
-.nav2_color_green:hover {
+.nav2_color_green:hover,
+.nav2_color_green a:hover {
+    color: #6347ed;
+}
+
+.nav2_color_green .active {
     color: #6347ed;
 }
 
@@ -128,7 +156,12 @@
     font-weight: 700;
 }
 
-.nav2_color_yellow:hover {
+.nav2_color_yellow:hover,
+.nav2_color_yellow a:hover {
+    color: #f7a831;
+}
+
+.nav2_color_yellow .active {
     color: #f7a831;
 }
 
@@ -137,7 +170,12 @@
     font-weight: 700;
 }
 
-.nav2_color_green2:hover {
+.nav2_color_green2:hover,
+.nav2_color_green2 a:hover {
+    color: #3bc7b0;
+}
+
+.nav2_color_green2 .active {
     color: #3bc7b0;
 }
 
@@ -146,7 +184,12 @@
     font-weight: 700;
 }
 
-.nav2_color_red2:hover {
+.nav2_color_red2:hover,
+.nav2_color_red2 a:hover {
+    color: #dd2727;
+}
+
+.nav2_color_red2 .active {
     color: #dd2727;
 }
 
@@ -209,13 +252,4 @@
     color: black;
     margin-left: 13px;
     line-height: 30px;
-}
-
-.right_comment_text .active {
-    color: red;
-}
-
-.right_comment_text a:hover {
-    color: #e54077;
-    font-weight: 500;
 }

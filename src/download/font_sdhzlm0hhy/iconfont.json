@@ -62,6 +62,27 @@
       "unicode_decimal": 58920
     },
     {
+      "icon_id": "1624999",
+      "name": "icon_qrcode",
+      "font_class": "icon_qrcode",
+      "unicode": "e6a5",
+      "unicode_decimal": 59045
+    },
+    {
+      "icon_id": "2077531",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "3282366",
+      "name": "密码隐藏",
+      "font_class": "mimayincang",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
       "icon_id": "5192842",
       "name": "泡面",
       "font_class": "paomian",
@@ -74,6 +95,20 @@
       "font_class": "shouji",
       "unicode": "e604",
       "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "6527108",
+      "name": "电脑",
+      "font_class": "diannao",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "7155455",
+      "name": "用户名",
+      "font_class": "yonghuming",
+      "unicode": "e657",
+      "unicode_decimal": 58967
     },
     {
       "icon_id": "7533278",
