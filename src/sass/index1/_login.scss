@@ -15,6 +15,7 @@
     }
 }
 
+//头部css样式
 header {
     @extend %cleafix;
     height: 32px;
@@ -76,6 +77,12 @@ header {
     color: red;
     text-decoration: underline;
 }
+
+
+/* 带有he_ri_none的都是相对于父元素的二级效果定位*/
+
+
+/* he代表的是header、ri代表的是right、none代表的是hover之后才出来的*/
 
 .header_right .he_ri_none {
     display: none;
@@ -264,10 +271,12 @@ header {
     color: #2263d4;
 }
 
-//最上面的固定定位
-//最上面的固定定位
-//最上面的固定定位
-//最上面的固定定位
+
+/*这里是最上面的固定定位
+这里是最上面的固定定位
+这里是最上面的固定定位
+这里是最上面的固定定位*/
+
 .header_top_fixed {
     position: fixed;
     z-index: 100;
@@ -316,11 +325,12 @@ header {
     vertical-align: middle;
 }
 
-//左边楼梯的固定定位
-//左边楼梯的固定定位
-//左边楼梯的固定定位
-//左边楼梯的固定定位
-//左边楼梯的固定定位
+
+/*左边楼梯的固定定位
+左边楼梯的固定定位
+左边楼梯的固定定位
+左边楼梯的固定定位*/
+
 .header_left_fixed {
     position: fixed;
     left: 50%;

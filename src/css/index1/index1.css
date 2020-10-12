@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0px;
   margin: 0px;
@@ -85,6 +86,8 @@ header {
   text-decoration: underline;
 }
 
+/* 带有he_ri_none的都是相对于父元素的二级效果定位*/
+/* he代表的是header、ri代表的是right、none代表的是hover之后才出来的*/
 .header_right .he_ri_none {
   display: none;
   line-height: 25px;
@@ -284,6 +287,10 @@ header {
   color: #2263d4;
 }
 
+/*这里是最上面的固定定位
+这里是最上面的固定定位
+这里是最上面的固定定位
+这里是最上面的固定定位*/
 .header_top_fixed {
   position: fixed;
   z-index: 100;
@@ -332,6 +339,10 @@ header {
   vertical-align: middle;
 }
 
+/*左边楼梯的固定定位
+左边楼梯的固定定位
+左边楼梯的固定定位
+左边楼梯的固定定位*/
 .header_left_fixed {
   position: fixed;
   left: 50%;
@@ -416,6 +427,7 @@ header {
   background-color: #19C8A9;
 }
 
+/* 下面是搜索框那块的内容*/
 .headerLayout {
   display: flex;
   flex-direction: row;
@@ -480,6 +492,8 @@ header {
   width: 170px;
 }
 
+/* 搜索框的内容到这里结束 */
+/* 以下是二级导航栏的轮播图的css*/
 .inner_nav1 .nav1_left {
   display: inline-block;
   width: 200px;
@@ -523,6 +537,7 @@ header {
   position: relative;
 }
 
+/* 下面是轮播图的样式*/
 .inner_nav2 {
   border-top: 2px solid #FF0036;
   background: blue;
@@ -568,6 +583,7 @@ header {
   background-color: white;
 }
 
+/* 以下是二级导航的css样式*/
 .nav2_comment_text {
   position: absolute;
   left: 0px;
@@ -743,6 +759,8 @@ header {
   line-height: 30px;
 }
 
+/*二级导航和轮播图到这里结束 */
+/* 以下是下面商品显示的css样式表*/
 .main_list {
   background-color: #f5f5f5;
 }
@@ -1009,6 +1027,11 @@ header {
   letter-spacing: 1px;
 }
 
+/*下面是商品列表的信息，统一的格式！！！！！！ 
+下面是商品列表的信息，统一的格式！！！！！！
+下面是商品列表的信息，统一的格式！！！！！！
+下面是商品列表的信息，统一的格式！！！！！！
+*/
 .commodity {
   display: flex;
   flex-direction: row;
@@ -1129,6 +1152,7 @@ header {
   height: 45px;
 }
 
+/*下面是后面结尾的css样式表了*/
 .footer {
   width: 100%;
   border-top: 1px solid #D1D7DC;

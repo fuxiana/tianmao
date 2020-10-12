@@ -1,0 +1,719 @@
+@charset "UTF-8";
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.mediate {
+    width: 1230px;
+    margin: auto;
+}
+
+header {
+    height: 32px;
+    background-color: #f2f2f2;
+    line-height: 32px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #999;
+}
+
+.header a {
+    color: #999;
+}
+
+.header a:hover {
+    color: red;
+}
+
+.header p span {
+    padding-right: 20px;
+}
+
+.header_right {
+    display: flex;
+}
+
+.header_right a {
+    display: inline-block;
+    padding: 0px 8px;
+}
+
+.header_right span {
+    color: red;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.header_right .he_ri_one {
+    position: relative;
+}
+
+.header_right .he_a1 {
+    border-left: 1px solid #f2f2f2;
+}
+
+.header_right .he_a2 {
+    border-right: 1px solid #f2f2f2;
+}
+
+.header_right .he_a1:hover,
+.header_right .he_a2:hover {
+    background-color: white;
+    border-bottom: 2px solid white;
+    color: red;
+    text-decoration: underline;
+}
+
+
+/* 带有he_ri_none的都是相对于父元素的二级效果定位*/
+
+
+/* he代表的是header、ri代表的是right、none代表的是hover之后才出来的*/
+
+.header_right .he_ri_none {
+    display: none;
+    line-height: 25px;
+    position: absolute;
+    left: 0px;
+    top: 33px;
+    width: 76px;
+    border: 1px solid #eee;
+    border-top: 0px;
+    z-index: 1000;
+    background-color: white;
+    padding: 5px 15px 5px 0px;
+}
+
+.header_right .he_ri_none2 {
+    display: none;
+    z-index: 10;
+    background-color: white;
+    padding: 8px 10px;
+    width: 122px;
+    position: absolute;
+    left: -69px;
+    top: 33px;
+    border: solid #eee;
+    border-width: 0px 1px 1px;
+    line-height: 22px;
+}
+
+.header_right .he_ri_none2 p {
+    padding-top: 5px;
+    color: #666;
+    font-weight: 700;
+}
+
+.header_right .he_ri_none2 a {
+    color: #666;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 0px;
+}
+
+.header_right .he_ri_none2 i {
+    display: block;
+    margin-top: 5px;
+    border-bottom: 1px dotted #827777;
+}
+
+.header_right .he_ri_two {
+    position: relative;
+}
+
+.header_right .he_ri_two em {
+    position: absolute;
+    left: 33px;
+    top: 16px;
+    font-size: 0px;
+    z-index: 10;
+    border: 5px transparent solid;
+    border-bottom: 5px solid white;
+    display: none;
+}
+
+.header_right .he_ri_two div {
+    position: absolute;
+    left: -47px;
+    top: 26px;
+    z-index: 1000;
+    display: none;
+    width: 175px;
+    height: 175px;
+    box-shadow: 0 0 5px #aaa;
+    background: url(//img.alicdn.com/tfs/TB1vJ0POwTqK1RjSZPhXXXfOFXa-175-215.png) 0 0 no-repeat;
+}
+
+.header_right .he_ri_two:hover div {
+    display: block;
+}
+
+.header_right .he_ri_two:hover em {
+    display: block;
+}
+
+.header_right .he_ri_one:hover .he_ri_none {
+    display: block;
+}
+
+.header_right .he_ri_one:hover .he_ri_none2 {
+    display: block;
+}
+
+.header_right .he_ri_none :hover {
+    display: block;
+}
+
+.header_right .he_a1 i {
+    display: inline-block;
+    margin: 0px 2px;
+    font-size: 0px;
+    border: 3px transparent solid;
+    border-top: 3px solid #999999;
+    vertical-align: 0px;
+}
+
+.header_right .he_n:hover {
+    color: red;
+}
+
+.header_right .he_a:hover {
+    background-color: white;
+    color: red;
+    text-decoration: underline;
+}
+
+.header_right a:hover .he_a1 i {
+    transform: rotate(180deg);
+    transform-origin: 50% 30%;
+    transition: transform .2s ease-in;
+}
+
+.he_ri_none3 {
+    z-index: 1000;
+    display: none;
+    background-color: white;
+    width: 1198px;
+    position: absolute;
+    left: -1115px;
+    top: 33px;
+    border: solid #eee;
+    border-width: 0px 1px 1px;
+    padding: 25px 0px;
+}
+
+.header_right .he_ri_one:hover .he_ri_none3 {
+    display: block;
+}
+
+.he_ri_none3 li {
+    float: left;
+    height: 110px;
+    padding-left: 30px;
+    overflow: hidden;
+}
+
+.he_ri_none3 li a {
+    position: relative;
+    display: block;
+    float: left;
+    padding: 6px 0px;
+    width: 95px;
+    line-height: 1.4;
+}
+
+.he_ri_none3 li .wt {
+    width: 50px;
+}
+
+.he_ri_none3 ul li i {
+    display: block;
+    position: absolute;
+    left: 47px;
+    top: 0px;
+    width: 9px;
+    height: 11px;
+}
+
+.he_ri_none3 .active1 {
+    background: url(../../images/TB1gyXLGFXXXXceXVXXCEcU6VXX-439-220.png) no-repeat -37px -11px;
+}
+
+.he_ri_none3 .active2 {
+    background: url(../../images/TB1gyXLGFXXXXceXVXXCEcU6VXX-439-220.png) no-repeat -37px 0px;
+}
+
+.he_ri_none3 li h1,
+.he_ri_none3 li span {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.none3_recommend h1,
+.none3_recommend span {
+    color: #f56a00;
+}
+
+.none3_bazaar h1,
+.none3_bazaar span {
+    color: #2263d4;
+}
+
+.none3_help h1,
+.none3_help span {
+    color: #666;
+}
+
+.he_ri_none3 .none3_bazaar>a:hover {
+    text-decoration: underline;
+    color: #2263d4;
+}
+
+
+/* 下面是搜索框那块的内容*/
+
+.headerLayout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headerLayout .headerLogo {
+    margin-left: -40px;
+}
+
+.headerSearch {
+    height: 46px;
+    width: 625px;
+    margin-top: 39px;
+    border: solid #FF0036;
+    position: relative;
+}
+
+.headerSearch input,
+.headerSearch button {
+    height: 36px;
+    padding: 5px 3px 5px 5px;
+    border: 0px;
+    outline: none;
+}
+
+.headerSearch input {
+    width: 491px;
+    font-size: 16px;
+}
+
+.headerSearch button {
+    cursor: pointer;
+    width: 126px;
+    height: 46px;
+    float: right;
+    background-color: red;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+    text-indent: 10px;
+    letter-spacing: 10px;
+}
+
+.sousuo {
+    position: absolute;
+    left: 0px;
+    top: 50px;
+    z-index: 10;
+    line-height: 25px;
+    width: 497px;
+    border: solid #eee;
+    border-width: 0px 1px 1px;
+}
+
+.sousuo li {
+    padding-left: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.headerLayout .headerNull {
+    width: 170px;
+}
+
+
+/* 搜索框的内容到这里结束 */
+
+
+/* 以下是商品的主要内容 */
+
+.main_list_nav {
+    background-color: #f9f9f9;
+    color: #806f66;
+    margin: 10px 0px;
+    padding: 5px;
+}
+
+.main_list_nav a {
+    display: inline-block;
+    color: #806f66;
+    padding: 0px 15px 0px 5px;
+    background-color: white;
+    position: relative;
+    border: 1px solid #ccc;
+    line-height: 22px;
+}
+
+.main_list_nav a:hover,
+.main_list_nav .active {
+    color: red;
+    background-color: #F1EDEC;
+}
+
+.main_list_nav .synthesize:hover i,
+.main_list_nav .sales:hover i,
+.main_list_nav .active i {
+    background: url(../images/TB1XClLeAY2gK0jSZFgXXc5OFXa-165-206.png) no-repeat -30px -23px !important;
+}
+
+.main_list_nav .synthesize i,
+.main_list_nav .sales i {
+    position: absolute;
+    width: 7px;
+    height: 10px;
+    top: 6px;
+    left: 33px;
+    display: inline-block;
+    background: url(../images/TB1XClLeAY2gK0jSZFgXXc5OFXa-165-206.png) no-repeat -22px -23px;
+}
+
+.main_list_nav .price span {
+    position: absolute;
+    left: 33px;
+    display: inline-block;
+    border: 4px solid transparent;
+}
+
+.main_list_nav .price .price_top {
+    top: 2px;
+    border-bottom: 4px solid #806f66;
+}
+
+.main_list_nav .price .price_bottom {
+    top: 12px;
+    border-top: 4px solid #806f66;
+}
+
+.main_list_nav .price .active1 {
+    top: 2px;
+    border-bottom: 4px solid red !important;
+}
+
+.main_list_nav .price .active2 {
+    top: 12px;
+    border-top: 4px solid red !important;
+}
+
+
+/* 下面是主要的商品的内容*/
+
+.main_list_content ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.main_list_content ul li {
+    height: 372px;
+    width: 220px;
+    margin: 20px 10px 0px 3px;
+}
+
+.main_list_content ul li a {
+    display: block;
+    height: 364px;
+    width: 212px;
+    margin: -3px;
+    padding: 4px;
+    border: 1px solid #f5f5f5;
+    transition: all .3s;
+}
+
+.main_list_content ul li a:hover {
+    margin: -6px;
+    border: 4px solid red;
+}
+
+.main_list_content ul li img {
+    width: 210px;
+    height: 210px;
+    margin-bottom: 20px;
+}
+
+.main_list_content ul li span {
+    color: red;
+}
+
+.main_list_content ul li span i {
+    font-size: 20px;
+    font-style: normal;
+}
+
+.main_list_content ul li em {
+    font-style: 13px;
+    margin-top: 10px;
+    font-style: normal;
+    height: 18px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main_list_content ul li em:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+.main_list_content ul li p {
+    margin-top: 10px;
+}
+
+.main_list_content ul li p strong {
+    color: red;
+}
+
+
+/* 下面是跳转的样式 */
+
+.pagelist {
+    width: 1170px;
+    margin: 0 auto;
+    text-align: right;
+    padding-right: 20px;
+    height: 100px;
+}
+
+.m-style {
+    margin-top: 40px;
+    float: right;
+    text-align: center;
+}
+
+.m-style:before,
+.m-style:after {
+    content: "";
+    display: table;
+}
+
+.m-style:after {
+    clear: both;
+    overflow: hidden;
+}
+
+.m-style span {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+.m-style .active {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: #e91e63;
+    color: #fff;
+    font-size: 14px;
+    border: 1px solid #e91e63;
+}
+
+.m-style a {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+.m-style a:hover {
+    color: #fff;
+    background: #e91e63;
+}
+
+.m-style .next,
+.m-style .prev {
+    font-family: "Simsun";
+    font-size: 16px;
+    font-weight: bold;
+    width: 80px;
+}
+
+.now,
+.count {
+    padding: 0 5px;
+    color: #f00;
+}
+
+.eg img {
+    max-width: 800px;
+    min-height: 500px;
+}
+
+.pagelist input {
+    float: left;
+    margin: 0 5px;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    outline: none;
+    color: #bdbdbd;
+    font-size: 14px;
+}
+
+
+/* 尾部信息 */
+
+.footer {
+    width: 100%;
+    border-top: 1px solid #D1D7DC;
+}
+
+.footer_content {
+    width: 1190px;
+    margin: auto;
+}
+
+.footer_content_img {
+    height: 100px;
+    margin: 25px auto;
+    background: url(//img.alicdn.com/tfs/TB14dANRXXXXXbdXXXXXXXXXXXX-1190-100.jpg) no-repeat;
+}
+
+.footer_content_img a {
+    display: block;
+    float: left;
+    height: 100px;
+    width: 297px;
+}
+
+.footer_content_text {
+    background: url(//img.alicdn.com/tfs/TB1dl28RXXXXXbzaFXXXXXXXXXX-136-50.png) no-repeat 45px bottom;
+    background-size: 65px 25px;
+    margin: auto;
+    padding-top: 22px;
+    height: 190px;
+}
+
+.text_list {
+    margin-left: 52px;
+    float: left;
+    width: 186px;
+}
+
+.text_list h1 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #646464;
+}
+
+.text_list a {
+    color: #8b8b8b;
+    line-height: 20px;
+    display: block;
+}
+
+.text_list a img {
+    height: 105px;
+    width: 105px;
+}
+
+.footer_content_last {
+    background-color: black;
+    border-top: 2px solid #FF0036;
+}
+
+.last_text {
+    width: 1190px;
+    margin: auto;
+    color: white;
+}
+
+.last_text a {
+    color: white;
+    margin-right: 3px;
+}
+
+.last_text_nav {
+    line-height: 25px;
+    padding: 5px 0px;
+}
+
+.footer-copyright {
+    color: #a4a4a4;
+}
+
+.footer-copyright span {
+    line-height: 20px;
+}
+
+.footer-copyright a {
+    color: #a4a4a4;
+}
+
+.footer-copyright a img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.footer-copyright b {
+    font-weight: 400;
+    color: #686868;
+}
+
+.footer-copyright p {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.footer-copyright p a:nth-last-child(2) img {
+    height: 30px;
+    width: 30px;
+}
+
+.footer-copyright p a:nth-last-child(1) img {
+    width: 80px;
+}

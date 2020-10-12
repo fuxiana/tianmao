@@ -1,0 +1,110 @@
+header {
+    width: 990px;
+    height: 43px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+header .header_nav {
+    width: 150px;
+    height: 43px;
+    padding-left: 30px;
+    line-height: 43px;
+    border-bottom: 2px solid #ff0036;
+}
+
+header .active {
+    border-bottom: 2px solid #e6e6e6;
+}
+
+.header_nav i {
+    background: url(https://img.alicdn.com/tfs/TB15xpqRpXXXXcyXFXXXXXXXXXX-24-24.png)no-repeat;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    text-indent: 7px;
+    line-height: 24px;
+    font-style: normal;
+    padding-right: 5px;
+    color: white;
+}
+
+header .active i {
+    background: url(https://g.alicdn.com/vip/register/2.9.7/xcommon/images/ico-circle2.png) no-repeat;
+}
+
+.header_nav span {
+    color: #3e3e3e;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+header .active span {
+    color: #999;
+}
+
+main {
+    width: 990px;
+    margin: auto;
+    padding: 50px 0px;
+}
+
+.main_content {
+    width: 720px;
+    margin: auto;
+}
+
+.main_content .login_name,
+.main_content .login_password {
+    padding: 10px 0px;
+}
+
+.login_name .content_left {
+    display: inline-block;
+    width: 240px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 20px;
+    color: #3c3c3c;
+    line-height: 37px;
+}
+
+.login_name .content_right {
+    font-size: 14px;
+}
+
+.password_left,
+.username_left {
+    display: inline-block;
+    width: 240px;
+    text-align: right;
+    font-size: 14px;
+    margin-right: 20px;
+    color: #3c3c3c;
+    line-height: 37px;
+}
+
+.login_password input,
+.login_confirm_password input,
+.login_username input {
+    height: 17px;
+    padding: 9px;
+    border: 1px solid #dedede;
+    width: 200px;
+}
+
+.footer button {
+    height: 36px;
+    line-height: 36px;
+    width: 180px;
+    background-color: #ff0036;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    margin-top: 40px;
+}
