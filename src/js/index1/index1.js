@@ -15,6 +15,6 @@ require.config({
         }
     }
 });
-require(['jquery'], function() {
+require(['jquery', 'jq_lazyload', 'jq_cookie', 'jq_cookie'], function() {
     require(['moud1'])
 })

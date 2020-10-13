@@ -31,14 +31,14 @@ main {
 }
 
 .main_content {
-    display: none;
+    display: block;
     position: absolute;
     right: 167px;
     top: 91px;
 }
 
 .main_content2 {
-    display: block;
+    display: none;
     position: absolute;
     right: 167px;
     top: 91px;
@@ -103,6 +103,16 @@ main {
 
 .login_password_nav .active {
     border-bottom: 2px solid black;
+}
+
+.error {
+    margin-bottom: 10px;
+    display: none;
+    line-height: 20px;
+    font-size: 12px;
+    color: orange;
+    border: 1px solid orange;
+    text-align: center;
 }
 
 .login_username {

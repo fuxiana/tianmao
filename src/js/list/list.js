@@ -82,6 +82,16 @@
         }
 
     });
+    $.each($('.m-style a'), function() {
+        $(this).click(function() {
+            flag = true; //重置标记
+            $.each(originalArray, function(index, value) {
+                ul.append(value);
+            })
+            $('.price_top').removeClass('active1').siblings().removeClass('active2') //取消掉价格的css样式
+            $('.synthesize').addClass('active').siblings().removeClass('active'); //给点击的排序添加css样式表，其他的排序css样式删掉
+        })
+    })
 
     //默认排序
     $('.synthesize').click(function() {

@@ -50,27 +50,18 @@ define([], function() {
 
                 })
                 bit.focus(function() { //获取焦点时如果value值为空透明度为0.6
-                        if (bit.val() == '') {
-                            clearInterval(time);
-                            bit.attr({
-                                style: "opacity:0.6"
-                            })
-                        } else { //当值不为空时value为正常
-                            bit.attr({
-                                style: "opacity:1"
-                            })
-                        }
+                    if (bit.val() == '') {
+                        clearInterval(time);
+                        bit.attr({
+                            style: "opacity:0.6"
+                        })
+                    } else { //当值不为空时value为正常
+                        bit.attr({
+                            style: "opacity:1"
+                        })
+                    }
 
-                    })
-                    // btn.click(function() {
-                    //     if (bit.val() == '') {
-                    //         setInterval(function() {
-                    //             $(this).siblings().attr({
-                    //                 style: "background:orange;opacity:0.6",
-                    //             })
-                    //         }, 1000)
-                    //     }
-                    // })
+                })
 
             }
             headerLogo()
@@ -92,7 +83,7 @@ define([], function() {
                     }
                     xiaoguo()
                 }, 4000)
-                $('.inner_nav2 ').not('.nav2_comment_imgs ol li').hover(function() {
+                $('.nav2_comment_imgs ').not('.nav2_comment_text').hover(function() {
                     clearInterval(time)
                 }, function() {
                     time = setInterval(function() {
@@ -188,19 +179,6 @@ define([], function() {
                 // 左边楼层的固定定位
                 $(window).on('scroll', function() {
                     let top1 = $(window).scrollTop();
-                    if (top1 > 500) {
-                        $('.header_left_fixed ul').stop(true).animate({
-                            width: 36,
-                            height: 369,
-                            opacity: 1
-                        }, 100)
-                    } else {
-                        $('.header_left_fixed ul').stop(false).animate({
-                            width: 0,
-                            height: 0,
-                            opacity: 0
-                        }, 100)
-                    }
                     $('.list_life').each(function(index, element) { //滑动到一定的top值就跳到对应的楼梯
                         let loucengtop = $(this).offset().top; //每块楼层距离顶部的top值。
                         let louti = $('.header_left_fixed li').not('.left_fixed_top');
@@ -211,7 +189,14 @@ define([], function() {
                             return false
                         }
                     })
+                    if (top1 > 500) {
+                        $('.header_left_fixed ul').show(500)
+                    } else {
+                        $('.header_left_fixed ul').hide(500)
+                    }
+
                 })
+
                 let louti = $('.header_left_fixed li').not('.left_fixed_top');
                 //左边楼梯的层数
                 louti.on('click', function() { //点击左边的按钮跳到对应的楼层
@@ -227,37 +212,35 @@ define([], function() {
                         scrollTop: 0
                     })
                 })
+                console.log($(window).scrollTop())
 
             }
             header_left_fixed()
 
             function lazy() { //懒加载
-                $(window).on('scroll', function() {
-                    let height = $(window).height(); //可视区的宽度
-                    let srctop = $(window).scrollTop(); //右边的top值
-                    $('img').each(function(index, element) {
-                            let imgtop = $(this).offset().top;
-                            if (imgtop > height + srctop || imgtop < height) {
-                                setInterval(() => {
-                                    $(this).attr('src', $(this).attr('data-src'))
-                                }, 1000);
-                            }
-                        })
-                        // $('.main li').each(function(index, element) {
-                        //     let litop = $(this).offset().top;
-                        //     if (litop > height + srctop || litop < height) {
-                        //         $(this).attr({
-                        //             style: 'opacity:1'
-                        //         })
-                        //     }
-                        // })
-                })
+                $("img.lazy").lazyload({
+                    effect: "fadeIn" //图片显示方式
+                });
             }
             lazy()
 
             function shuju() {
-
+                $.ajax({
+                    url: 'http://192.168.11.11/tianmao/tianmao/php/index1.php',
+                    dataType: 'json'
+                }).done(function(data) {
+                    let str = '';
+                    $.each(data, function(index, value) {
+                        str += ' <li><a href="detail.html?sid=' + value.sid + ' " target="_blank"><img class="lazy" data-original="' + value.url + '" alt=""><p>' + value.title + '</p><span>￥' + value.price + '</span></a></li>'
+                    })
+                    $('.list_like_nav').siblings(' .commodity').html(str);
+                    //实现懒加载效果
+                    $("img.lazy").lazyload({
+                        effect: "fadeIn" //图片显示方式
+                    });
+                })
             }
+            shuju()
         }()
     }
 
