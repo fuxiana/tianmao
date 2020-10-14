@@ -28,7 +28,7 @@
         </div>
     </header>
     <main>
-        <form action="" method="post">
+        <form method="POST" id="registry" action="http://192.168.11.11/tianmao/tianmao/php/registry.php">
             <div class="main_content header">
                 <p class="login_name">
                     <span class="content_left">登入名</span>
@@ -38,13 +38,24 @@
                     <span class="content_left">请设置登录密码</span>
                     <span class="content_right">登录时验证，保护账号信息</span>
                 </p>
-                <p class="login_password">
+                <p class="login_password ">
                     <span class="password_left">登入密码</span>
-                    <input type="text" placeholder="设置你的登入密码" id="password">
+                    <input type="password" placeholder="设置你的登入密码" id="password" name="password">
+                    <span class="error1">密码设置不符合要求</span>
+                    <div class="hine">
+                        <div class="intension">
+                            强度 <i style="background: #dcdcdc;"></i><i style="background:#dcdcdc;"></i><i style="background:#dcdcdc"></i><span>低</span>
+                        </div>
+                        <div class="hine_one">6~20个字符</div>
+                        <div class="hine_two">只能包含字母、数字以及标点符号（除空格）</div>
+                        <div class="hine_three">字母、数字和标点符号至少包含2种</div>
+                    </div>
                 </p>
                 <p class="login_confirm_password">
-                    <span class="password_left">确认密码</span>
-                    <input type="text" placeholder="请再次输入你的登入密码" id="confirm_password">
+                    <span class="password_left affirm_password">确认密码</span>
+                    <input type="password" placeholder="请再次输入你的登入密码" id="confirm_password">
+                    <span class="error2"></span>
+
                 </p>
             </div>
             <div class="main_content middle">
@@ -53,15 +64,19 @@
                 </p>
                 <p class="login_username">
                     <span class="username_left">会员名</span>
-                    <input type="text" placeholder="会员名一旦设置成功，无法修改">
+                    <input type="text" placeholder="会员名一旦设置成功，无法修改" id="username" name="username">
+                    <span class="error3"></span>
                 </p>
             </div>
             <div class="main_content footer">
                 <span class="username_left"></span>
-                <button>提交</button>
+                <input id="submit" type="submit" name="submit" value="注册">
             </div>
         </form>
     </main>
 </body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="./js/registry.js"></script>
+<script src="./js/sha1.js"></script>
 
 </html>

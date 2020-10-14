@@ -81,37 +81,79 @@
 
 
     //存储cookie值
-    let arrone = [];
-    let arrid = [];
-    let arrvalue = [];
-    let storevalue = 0;
-    arrone = decodeURIComponent(document.cookie).split('; '); //分号后面有一个空格
-    $.each(arrone, function(index, value) {
-        arrid[index] = value.split('=')[0]; //获取到sid的值到arrid中
-        arrvalue[index] = value.split('=')[1]; //获取到value的值到arrvalue中
-    })
-    $('.govern').click(function() {
-        alert('你确定要添加' + $('.number input').val() + '件吗？')
+    // let arrone = [];
+    // let arrid = [];
+    // let arrvalue = [];
+    // let storevalue = 0;
+    // arrone = decodeURIComponent(document.cookie).split('; '); //分号后面有一个空格
+    // $.each(arrone, function(index, value) {
+    //     arrid[index] = value.split('=')[0]; //获取到sid的值到arrid中
+    //     arrvalue[index] = value.split('=')[1]; //获取到value的值到arrvalue中
+    // })
+    // $('.govern').click(function() {
+    //         alert('你确定要添加' + $('.number input').val() + '件吗？')
 
-        function addcookie(name, value, days) {
-            $.each(arrid, function(index, valueid) {
-                if (name == valueid) {
-                    storevalue = index;
-                    return false;
-                } else {
-                    arrid.push(name);
-                    arrvalue.push(value);
-                    arrvalue[storevalue] = 0
-                }
-            })
-            let date = new Date();
-            date.setDate(date.getDate() + days);
-            document.cookie = `${name}=${encodeURIComponent(Number(value)+Number(arrvalue[storevalue]))};expires=${date};path=/`;
-            arrvalue[storevalue] = Number(value) + Number(arrvalue[storevalue])
+    //         function addcookie(name, value, days) {
+    //             $.each(arrid, function(index, valueid) {
+    //                 if (name == valueid) {
+    //                     storevalue = index;
+    //                     return false;
+    //                 } else {
+    //                     arrid.push(name);
+    //                     arrvalue.push(value);
+    //                     arrvalue[storevalue] = 0
+    //                 }
+    //             })
+    //             let date = new Date();
+    //             date.setDate(date.getDate() + days);
+    //             document.cookie = `${name}=${encodeURIComponent(Number(value)+Number(arrvalue[storevalue]))};expires=${date};path=/`;
+    //             arrvalue[storevalue] = Number(value) + Number(arrvalue[storevalue])
 
+    //         }
+    //         addcookie(sid1, $('.number input').val(), 6)
+    //         console.log(arrid, arrvalue)
+    //     })
+    //2.怎么存储--数组
+    let arrsid = []; //存储商品的编号。
+    let arrnum = []; //存储商品的数量。
+    //3.点击加入购物车按钮(确定是第一次点击还是多次点击)
+    //第一次点击：在购物车列表页面创建商品列表
+    //多次点击：之前创建过商品列表，只需要数量增加。
+
+    //取出cookie,才能判断是第一次还是多次点击
+    function cookietoarray() {
+        if (jscookie.get('cookiesid') && jscookie.get('cookienum')) {
+            arrsid = jscookie.get('cookiesid').split(','); //获取cookie 同时转换成数组。[1,2,3,4]
+            arrnum = jscookie.get('cookienum').split(','); //获取cookie 同时转换成数组。[12,13,14,15]
+        } else {
+            arrsid = [];
+            arrnum = [];
         }
-        addcookie(sid1, $('.number input').val(), 6)
-        console.log(arrid, arrvalue)
-    })
+    }
+
+
+
+    $('.govern').on('click', function() {
+        //获取当前商品对应的sid
+        let $sid = sid1;
+        //判断是第一次点击还是多次点击
+        //多次点击
+        //$.inArray(value,array,[fromIndex])
+        //确定第一个参数在数组中的位置，从0开始计数(如果没有找到则返回 -1 )。
+        cookietoarray();
+        if ($.inArray($sid, arrsid) != -1) { //$sid存在，商品列表存在，数量累加
+            //先取出cookie中存在的数量+当前添加的数量，一起添加到cookie中。
+            let $num = parseInt(arrnum[$.inArray($sid, arrsid)]) + parseInt($('.number input').val()); //取值
+            arrnum[$.inArray($sid, arrsid)] = $num; //赋值
+            jscookie.add('cookienum', arrnum, 10);
+        } else {
+            //第一次点击加入购物车按钮,将商品的sid和商品的数量放到提前准备的数组里面，然后将数组传入cookie.
+            arrsid.push($sid); //将编号$sid push到arrsid数组中
+            jscookie.add('cookiesid', arrsid, 10);
+            arrnum.push($('.number input').val()); //将数量push到arrnum数组中
+            jscookie.add('cookienum', arrnum, 10);
+        }
+        alert('按钮触发了');
+    });
 
 }(jQuery)

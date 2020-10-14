@@ -49,6 +49,7 @@ main {
     width: 990px;
     margin: auto;
     padding: 50px 0px;
+    position: relative;
 }
 
 .main_content {
@@ -96,7 +97,7 @@ main {
     width: 200px;
 }
 
-.footer button {
+.footer #submit {
     height: 36px;
     line-height: 36px;
     width: 180px;
@@ -107,4 +108,42 @@ main {
     color: white;
     font-size: 16px;
     margin-top: 40px;
+}
+
+
+/* 以下注册页面弹出的提示框 */
+
+.error1 {
+    color: tomato;
+    display: none;
+    font-size: 14px;
+}
+
+.error3 {
+    font-size: 12px;
+    color: red;
+}
+
+.hine {
+    border: 1px solid silver;
+    position: absolute;
+    top: 170px;
+    left: 636px;
+    width: 250px;
+    height: 130px;
+    font-size: 12px;
+    display: none;
+    z-index: 1000;
+}
+
+.hine div {
+    margin: 10px;
+}
+
+.hine i {
+    display: inline-block;
+    margin-right: 5px;
+    height: 12px;
+    width: 30px;
+    vertical-align: middle;
 }

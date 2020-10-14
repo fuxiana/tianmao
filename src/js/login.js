@@ -16,7 +16,7 @@
             url: 'http://192.168.11.11/tianmao/tianmao/php/login.php',
             data: {
                 user: $('#username').val(),
-                pass: hex_sha1($('#password').val())
+                pass: $('#password').val()
             }
         }).done(function(data) {
             if (!data) {
@@ -24,8 +24,9 @@
                 flag = 2
                 console.log(data)
                 $('#username').val('');
-                $('#password').val('')
+                $('#password').val('');
             } else {
+                // localStorage.setItem('name', $('#username').val())
                 location.href = "http://192.168.11.11/tianmao/tianmao/src/index1.html"
             }
         })
